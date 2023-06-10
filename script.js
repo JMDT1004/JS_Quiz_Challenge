@@ -87,15 +87,6 @@ function showQuestion() {
 start.addEventListener('click', setTime);
 start.addEventListener('click', showQuestion);
 
-/*function logScores() {
-    questionOut.innerText='Your Score is' + localStorage.value
-
-
-
-}
-
-*/
-
 
 
 
