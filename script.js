@@ -9,24 +9,16 @@ var result = document.querySelector('#result');
 var currentIndex = 0;
 var secondsLeft = 60;
 
-
-
-
 function setTime() {
     var timerInterval = setInterval(function () {
         secondsLeft--;
         timeEl.textContent = secondsLeft + ' seconds left';
-
         if (secondsLeft === 0) {
             clearInterval(timerInterval);
-            
             return timeEl.textContent = 'Time is Up';
-
-
         }
     }, 1000);
 }
-
 
 function clickCount() {
     if (this.textContent === questionData[currentIndex].answer) {
@@ -50,14 +42,9 @@ function clickCount() {
     }
 }
 
-
-
 function showQuestion() {
     var questionObj = questionData[currentIndex];
     questionOut.innerText = questionObj.question;
-
-
-
 
     btnchoice1 = document.createElement('button');
     btnchoice2 = document.createElement('button');
@@ -78,11 +65,7 @@ function showQuestion() {
     btnchoice2.addEventListener('click', clickCount);
     btnchoice3.addEventListener('click', clickCount);
     btnchoice4.addEventListener('click', clickCount);
-
-   
-
 };
-
 
 start.addEventListener('click', setTime);
 start.addEventListener('click', showQuestion);
